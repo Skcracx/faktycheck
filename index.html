@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaktyCheck | Pendeteksi Berita Palsu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shield-check"></i>
+                <span>FaktyCheck</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Beranda</a>
+                <a href="#">Tentang</a>
+                <a href="#">Panduan</a>
+                <a href="#">Kontak</a>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Deteksi Berita Palsu dengan AI</h1>
+                <p>Verifikasi fakta dengan cepat dan tepat menggunakan teknologi kecerdasan buatan terkini</p>
+                <a href="#detection-section" class="btn btn-primary">Mulai Periksa <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/background.jpg" alt="Ilustrasi Deteksi Berita">
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="detection-section" class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-search"></i> Sistem Deteksi Berita</h2>
+                    <p>Masukkan teks atau URL berita untuk mendeteksi keasliannya</p>
+                </div>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="text">
+                        <i class="fas fa-align-left"></i> Teks Berita
+                    </button>
+                    <button class="tab-btn" data-tab="url">
+                        <i class="fas fa-link"></i> URL Berita
+                    </button>
+                </div>
+                
+                <form id="news-form">
+                    <div id="text-input-container" class="tab-content active">
+                        <div class="form-group">
+                            <label for="news-text">Teks Berita:</label>
+                            <textarea id="news-text" name="news-text" rows="8" placeholder="Salin dan tempelkan teks berita di sini untuk dianalisis..."></textarea>
+                            <div class="text-counter"><span id="char-count">0</span> karakter</div>
+                        </div>
+                    </div>
+                    
+                    <div id="url-input-container" class="tab-content">
+                        <div class="form-group">
+                            <label for="news-url">URL Berita:</label>
+                            <div class="input-group">
+                                <i class="fas fa-globe"></i>
+                                <input type="url" id="news-url" name="news-url" placeholder="https://example.com/berita/artikel" />
+                            </div>
+                            <small class="help-text">Masukkan URL lengkap termasuk http:// atau https://</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-action">
+                        <button type="submit" class="btn btn-primary btn-detect">
+                            <i class="fas fa-search"></i> Deteksi Berita
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="loading-indicator">
+                    <div class="spinner-container">
+                        <div class="spinner"></div>
+                    </div>
+                    <p>Menganalisis berita...</p>
+                </div>
+            </div>
+            
+            <div id="result-container" class="card result-card">
+                <!-- Results will be displayed here by JavaScript -->
+            </div>
+            
+            <div class="how-it-works">
+                <h2>Bagaimana Cara Kerjanya?</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-paste"></i>
+                        </div>
+                        <h3>Masukkan Berita</h3>
+                        <p>Salin teks berita atau masukkan URL artikel yang ingin Anda periksa</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Analisis AI</h3>
+                        <p>Algoritma AI kami akan menganalisis konten dan membandingkannya dengan pola berita palsu</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Hasil Terperinci</h3>
+                        <p>Dapatkan hasil analisis dengan persentase keaslian dan rekomendasi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="container">
+                <h2>Fitur Unggulan</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Deteksi Cepat</h3>
+                        <p>Hasil analisis dalam hitungan detik</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Model AI Canggih</h3>
+                        <p>Menggunakan model machine learning terbaru</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Akurasi Tinggi</h3>
+                        <p>Tingkat keberhasilan deteksi hingga 95%</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Privasi Terjamin</h3>
+                        <p>Tidak menyimpan data pengguna</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-shield-check"></i>
+                    <span>FaktyCheck</span>
+                    <p>Sistem Deteksi Berita Palsu untuk Indonesia</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-menu">
+                        <h4>Menu</h4>
+                        <ul>
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#">Tentang</a></li>
+                            <li><a href="#">Panduan</a></li>
+                            <li><a href="#">Kontak</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h4>Dukungan</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Kebijakan Privasi</a></li>
+                            <li><a href="#">Syarat & Ketentuan</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <h4>Media Sosial</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FaktyCheck. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
